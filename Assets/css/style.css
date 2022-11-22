@@ -1,3 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 64px;
+}
+
 body{
     background-color: yellowgreen;
+}
+
+ul{
+    margin-top: 200px;
+    border: 1px solid #000;
+    height: 10px;
+    overflow: hidden;
+    transition-property: height;
+    transition-duration: 5s;
+    transition-delay: 3s;
+}
+
+ul.transicao {
+    height: 400px;
+}
+
+button{
+    margin-top: 10px;
 }
