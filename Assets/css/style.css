@@ -9,20 +9,30 @@ body{
     background-color: yellowgreen;
 }
 
-ul{
+main{
     margin-top: 200px;
-    border: 1px solid #000;
-    height: 10px;
+    background-color: aquamarine;
+    height: 0;
     overflow: hidden;
     transition-property: height;
     transition-duration: 5s;
-    transition-delay: 3s;
+    transition-delay: 2s;
 }
 
-ul.transicao {
-    height: 400px;
+main.transicao {
+    height: 390px;
 }
 
 button{
     margin-top: 10px;
+}
+
+article{
+    border: 1px solid #000;
+    height: 860px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: none;
 }

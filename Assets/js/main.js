@@ -1,13 +1,14 @@
 //  para consultar -> https://github.com/digitalinnovationone/js-developer-pokedex
 
-const meuh1 = document.querySelector('#teste');
+const container = document.querySelector('#container');
+const showPokemon = document.querySelector('#showPokemon');
 
 function MyDiv(props) {
-    meuh1.innerHTML = `
-        <li>Nome: ${props.name}</li>
-        <li>Ordem: ${props.order}</li>
-        <li>Experiência: ${props.base_experience}</li>
-        <li>Peso: ${props.weight}kg</li>
+    showPokemon.innerHTML = `
+        <h1 id="pokemon">${props.name}</h1>
+        <h1>Ordem: ${props.order}</h1>
+        <h1>Experiência: ${props.base_experience}</h1>
+        <h1>Peso: ${props.weight}kg</h1>
     `
 }
 
@@ -18,8 +19,8 @@ let offset = 0;
 const limit = 1;
 
 function exibePokemon(offset) {
-    meuh1.setAttribute('class', 'transicao');
-    const myRequest = fetch(`${baseUrl}?offset=${offset}&limit=${limit}`)
+    container.setAttribute('class', 'transicao');
+    fetch(`${baseUrl}?offset=${offset}&limit=${limit}`)
         .then(response => response.json())
         .then(data => data.results)
         .then(results => fetch(results[0].url))
@@ -46,4 +47,22 @@ document.querySelector('#previous').addEventListener('click', () => {
         offset -= 1;
         exibePokemon(offset);
     }
+})
+
+document.getElementById('moreDetails').addEventListener('click', () => {
+    const pokemon = document.getElementById('pokemon').innerHTML;
+    exibeDetalhes(pokemon);
+})
+
+const detailsPokemon = document.querySelector('#detailsPokemon');
+function exibeDetalhes() {
+    detailsPokemon.style.display = 'block';
+    detailsPokemon.innerHTML = `
+        Deus seja louvado, amém.
+        <button type="button" id="closeDetails">X</button>
+        `;
+}
+
+document.querySelector('#closeDetails').addEventListener('click', () => {
+    detailsPokemon.style.display = 'none';
 })
