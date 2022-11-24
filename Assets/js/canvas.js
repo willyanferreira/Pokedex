@@ -1,15 +1,24 @@
 // Pokédex Top
 let myCanvas = document.querySelector('#pokedexTop');
-console.log(myCanvas);
-myCanvas.style.backgroundColor = 'red';
-myCanvas.style.width = '100%';
-myCanvas.style.height = '200px';
+let myCanvasBottom = document.querySelector('#pokedexBottom');
 
-let myCanvasContext = myCanvas.getContext('2d');
-let myCanvasContext2 = myCanvas.getContext('2d');
-myCanvasContext.beginPath();
-myCanvasContext2.beginPath();
-myCanvasContext.arc(0,0,40,0,2);
-myCanvasContext2.arc(95,0,40,2,0);
-myCanvasContext.stroke();
-myCanvasContext2.stroke();
+
+// DESENHANDO A PARTE DE CIMA DA POKÉDEX
+{
+    let myCanvasContext = myCanvas.getContext('2d');
+    // ARCOS DA ESQUERDA
+    myCanvasContext.beginPath();
+    myCanvasContext.arc(0, 0, 40, 0, 7);
+    myCanvasContext.stroke();
+    myCanvasContext.beginPath();
+    myCanvasContext.arc(0, 0, 60, 0, 7);
+    myCanvasContext.stroke();
+
+    // ARCOS DA DIREITA
+    myCanvasContext.beginPath();
+    myCanvasContext.arc(300, 0, 40, 0, 7);
+    myCanvasContext.stroke();
+    myCanvasContext.beginPath();
+    myCanvasContext.arc(300, 0, 60, 0, 7);
+    myCanvasContext.stroke();
+}

@@ -5,34 +5,10 @@
     font-size: 64px;
 }
 
-body{
-    background-color: yellowgreen;
-}
-
-main{
-    /* margin-top: 200px; */
-    background-color: aquamarine;
-    height: 0;
-    overflow: hidden;
-    transition-property: height;
-    transition-duration: 5s;
-    transition-delay: 2s;
-}
-
-main.transicao {
-    height: 390px;
-}
-
-button{
-    margin-top: 10px;
-}
-
-article{
+div#container{
     border: 1px solid #000;
-    height: 860px;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: none;
+}
+
+canvas{
+    border: 1px solid #000;
 }
