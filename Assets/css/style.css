@@ -2,13 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 64px;
+    /* font-size: 64px; */
 }
 
 div#container{
     border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 canvas{
     border: 1px solid #000;
+    width: 200px;
+    height: 200px;
 }
