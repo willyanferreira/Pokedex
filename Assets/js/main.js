@@ -1,12 +1,12 @@
 //  para consultar -> https://github.com/digitalinnovationone/js-developer-pokedex
 
-const container = document.querySelector('#container');
+const container = document.querySelector('#pokedex');
 const showPokemon = document.querySelector('#showPokemon');
 
 function MyDiv(props) {
     showPokemon.innerHTML = `
-        <h1 id="pokemon">${props.order} - ${props.name}</h1>
-        <img src="${props.sprites.other.dream_world.front_default}"/>
+        <h1 id="pokemon" style="opacity: 0.2">${props.order} - ${props.name}</h1>
+        <div id="PokeImg"><img src="${props.sprites.other.dream_world.front_default}" style="opacity: 0.2"/></div>
     `
 }
 
