@@ -13,12 +13,18 @@
     <div id="container">
         <div id="content">
             <canvas id="pokedexTop"></canvas>
-            <main>
-                <div id="showPokemon" style="border: 1px solid red;"></div>
+            <main id="pokedex">
+                <div id="searchPokemon">
+                    <input type="search" id="search">
+                    <label for="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </div>
+                <div id="showPokemon"></div>
                 <div id="controllers">
-                    <i id="previous" class="fa-solid fa-angles-left" style="opacity: 0.2;"></i>
-                    <i id="moreDetails" class="fa-solid fa-circle-info" style="opacity: 0.2;"></i>
-                    <i id="next" class="fa-solid fa-angles-right" style="opacity: 0.2;"></i>
+                    <i id="previous" class="fa-solid fa-angles-left"></i>
+                    <i id="moreDetails" class="fa-solid fa-circle-info"></i>
+                    <i id="next" class="fa-solid fa-angles-right"></i>
                 </div>
             </main>
             <canvas id="pokedexBottom"></canvas>
