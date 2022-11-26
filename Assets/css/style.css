@@ -6,15 +6,44 @@
 }
 
 div#container{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+div#content{
+    /* border: 1px solid blue; */
+    max-height: 851px;
+    max-width: 393px;
+}
+
 canvas{
-    border: 1px solid #000;
-    width: 200px;
+    /* border: 1px solid #000; */
     height: 200px;
+    max-width: 393px;
+    background-color: tomato;
+    border-radius: 50px 50px 0 0;
+}
+
+canvas#pokedexBottom{
+    transform: rotate(180deg);
+}
+
+main{
+    height: 351px;
+    background-color: #87CEFA;
+    width: 100%;
+    /* display: none; */
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}
+
+div#stats{
+    display: none;
 }
