@@ -5,8 +5,9 @@ const showPokemon = document.querySelector('#showPokemon');
 
 function MyDiv(props) {
     showPokemon.innerHTML = `
-        <h1 id="pokemon" style="opacity: 0.2">${props.order} - ${props.name}</h1>
+        <h1 id="pokemon">${props.name}</h1>
         <div id="PokeImg"><img src="${props.sprites.other.dream_world.front_default}" style="opacity: 0.2"/></div>
+        <h1 id="order">#${props.order}</h1>
     `
 }
 
@@ -16,7 +17,7 @@ const baseUrl = 'https://pokeapi.co/api/v2/pokemon/';
 let offset = 0;
 const limit = 1;
 
-function exibePokemon(offset) {
+function exibePokemon() {
     container.setAttribute('class', 'transicao');
     fetch(`${baseUrl}?offset=${offset}&limit=${limit}`)
         .then(response => response.json())
@@ -29,14 +30,14 @@ function exibePokemon(offset) {
         .then(MyDiv);
 }
 
-exibePokemon(offset);
+exibePokemon();
 
 
 // console.log(myRequest);
 
 document.querySelector('#next').addEventListener('click', () => {
     offset += 1;
-    exibePokemon(offset)
+    exibePokemon()
 })
 
 document.querySelector('#previous').addEventListener('click', () => {
@@ -46,22 +47,4 @@ document.querySelector('#previous').addEventListener('click', () => {
         offset -= 1;
         exibePokemon(offset);
     }
-})
-
-document.getElementById('moreDetails').addEventListener('click', () => {
-    const pokemon = document.getElementById('pokemon').innerHTML;
-    exibeDetalhes(pokemon);
-})
-
-const detailsPokemon = document.querySelector('#detailsPokemon');
-const stats = document.querySelector('#stats');
-function exibeDetalhes() {
-    stats.style.display = 'block';
-    detailsPokemon.innerHTML = `
-        Deus seja louvado, amém.
-        `
-}
-
-document.querySelector('#closeDetails').addEventListener('click', () => {
-    alert('Tô aqui!');
 })
