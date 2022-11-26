@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,26 @@
     <title>Pokédex</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
 </head>
+
 <body>
     <div id="container">
-        <canvas id="pokedexTop"></canvas>
-        <canvas id="pokedexBottom"></canvas>
+        <div id="content">
+            <canvas id="pokedexTop"></canvas>
+            <main>
+                <div id="showPokemon"></div>
+                <button id="previous" type="button">Previous</button>
+                <button id="next" type="button">Next</button>
+                <button type="button" id="moreDetails">More details</button>
+            </main>
+            <canvas id="pokedexBottom"></canvas>
+            <div id="stats">
+                <article id="detailsPokemon"></article>
+                <button type="button" id="closeDetails">X</button>
+            </div>
+        </div>
     </div>
     <script src="./Assets/js/canvas.js"></script>
     <script src="./Assets/js/main.js"></script>
 </body>
+
 </html>
