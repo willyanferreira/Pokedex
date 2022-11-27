@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="./Assets/css/details.css">
+    <link rel="stylesheet" href="./Assets/css/types.css">
 </head>
 
 <body>
@@ -29,8 +31,11 @@
             </main>
             <canvas id="pokedexBottom"></canvas>
             <div id="stats">
-                <article id="detailsPokemon"></article>
-                <button type="button" id="closeDetails">X</button>
+                <div id="pokeStats">
+                    <button type="button" id="closeDetails">X</button>
+                    <div id="pokemon"></div>
+                    <div id="detailsPokemon"></div>
+                </div>
             </div>
         </div>
     </div>
