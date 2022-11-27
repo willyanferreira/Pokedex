@@ -6,10 +6,13 @@ const showPokemon = document.querySelector('#showPokemon');
 function MyDiv(props) {
     showPokemon.innerHTML = `
         <h1 id="pokemon">${props.name}</h1>
-        <div id="PokeImg"><img src="${props.sprites.other.dream_world.front_default}" style="opacity: 0.2"/></div>
-        <h1 id="order">#${props.order}</h1>
+        <div id="PokeImg"><img id="pokeSRC" src="${props.sprites.other.dream_world.front_default}" style="opacity: 0.2"/></div>
+        <div id="pokeTypes">${props.types.map(e => `<h1 class="types" >${e.type.name}</h1>`).join('')}</div>
+        <h1 id="pokeID">#${props.id}</h1>
     `
 }
+
+{/* <ol id="pokeType">${props.types.map(e => `<li>${e.type.name}</li>`).join('')}</ol> */}
 
 // document.write('Conseguirei em nome de Jeses!');
 
