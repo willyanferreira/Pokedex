@@ -1,0 +1,57 @@
+div#stats{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div#stats div h1{
+    opacity: 1;
+}
+
+div#pokeStats{
+    background-color: #fff;
+    width: 393px;
+    height: 500px;
+    position: relative;
+}
+
+div#detailsPokemon ol{
+    list-style-type: none;
+    text-align: justify;
+    margin-top: 30px;
+}
+
+div#stats button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.statsPercent{
+    border: 1px solid #1e1e1e;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: linen;
+    /* width: 180px; */
+    height: 10px;
+    margin: 0 5px 2px 5px;
+}
+
+/* div.statsPercent::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    background-color: turquoise;
+} */
+
+div#detailsIMG{
+    text-align: center;
+}
