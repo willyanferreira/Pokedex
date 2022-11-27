@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-size: 64px; */
+    font-size: 24px;
 }
 
 div#container{
@@ -33,7 +33,7 @@ main{
     /* width: 100%; */
     position: relative;
     /* display: none; */
-    margin-top: -2px;
+    margin-top: -5px;
     /* padding-top: 20px; */
     transition-property: height;
     transition-delay: 2s;
@@ -50,7 +50,7 @@ h1{
     opacity: 0.2;
 }
 
-h1#order{
+h1#pokeID{
     position: absolute;
     right: 0;
     top: 220px;
@@ -98,18 +98,13 @@ img{
     width: 200px;
 }
 
-div#stats{
-    display: none;
-    border: 1px solid red;
-    position: absolute;
-    width: 393px;
-    height: 100%;
-    top: 0;
-    background-color: #fff;
-    z-index: 1;
-}
-
 i{
     font-size: 25px;
     opacity: 0.2;
+}
+
+div#pokeTypes{
+    position: absolute;
+    top: 210px;
+    /* opacity: 0; */
 }
