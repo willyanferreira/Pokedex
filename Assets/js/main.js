@@ -45,7 +45,7 @@ document.querySelector('#next').addEventListener('click', () => {
 
 document.querySelector('#previous').addEventListener('click', () => {
     if (offset <= 0) {
-        alert('Não existe pokémon anteriro a esse.');
+        alert('Não existe pokémon anterior a esse.');
     } else {
         offset -= 1;
         exibePokemon(offset);
